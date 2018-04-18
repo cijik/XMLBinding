@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/css" href="routes.css"?>
+<?xml-stylesheet type="text/xsl" href="routes.xsl"?>
+
+<!DOCTYPE routes [
+	<!ELEMENT routes (list+)>
+	<!ELEMENT list (route, price, departure, duration)>
+	<!ELEMENT route (#PCDATA)>
+	<!ELEMENT price (#PCDATA)>
+	<!ELEMENT departure (#PCDATA)>
+	<!ELEMENT duration (#PCDATA)>
+	<!ATTLIST price currency CDATA "MDL">
+	<!ATTLIST departure time CDATA "UTC+2">
+	<!ENTITY minimal_time "1 hour">
+]>
+<routes>
+	<list>
+		<route>Chisinau-Balti</route>
+		<price currency="MDL">300</price>
+		<departure time="UTC+2">12:30</departure>
+		<duration>3 hours</duration>
+	</list>
+	<list>
+		<route>Chisinau-Iasi</route>
+		<price currency="MDL">800</price>
+		<departure time="UTC+2">9:20</departure>
+		<duration>6 hours</duration>
+	</list>
+	<list>
+		<route>Chisinau-Comrat</route>
+		<price currency="MDL">400</price>
+		<departure time="UTC+2">11:10</departure>
+		<duration>4 hours</duration>
+	</list>
+	<list>
+		<route>Chisinau-Taraclia</route>
+		<price currency="MDL">560</price>
+		<departure time="UTC+2">11:40</departure>
+		<duration>4 hours 20 minutes</duration>
+	</list>
+	<list>
+		<route>Chisinau-Tiraspol</route>
+		<price currency="MDL">730</price>
+		<departure time="UTC+2">16:00</departure>
+		<duration>3 hours 30 minutes</duration>
+	</list>
+	<list>
+		<route>Chisinau-Tighina</route>
+		<price currency="MDL">560</price>
+		<departure time="UTC+2">17:30</departure>
+		<duration>3 hours</duration>
+	</list>
+	<list>
+		<route>Chisinau-Cahul</route>
+		<price currency="MDL">420</price>
+		<departure time="UTC+2">10:00</departure>
+		<duration>4 hours 20 minutes</duration>
+	</list>
+	<list>
+		<route>Chisinau-Bucuresti</route>
+		<price currency="MDL">930</price>
+		<departure time="UTC+2">8:40</departure>
+		<duration>10 hours 40 minutes</duration>
+	</list>
+	<list>
+		<route>Chisinau-Suceava</route>
+		<price currency="MDL">890</price>
+		<departure time="UTC+2">9:40</departure>
+		<duration>8 hours 10 minutes</duration>
+	</list>
+	<list>
+		<route>Chisinau-Brasov</route>
+		<price currency="MDL">930</price>
+		<departure time="UTC+2">8:00</departure>
+		<duration>8 hours</duration>
+	</list>
+	<list>
+		<route>Chisinau-Timisoara</route>
+		<price currency="MDL">1100</price>
+		<departure time="UTC+2">7:10</departure>
+		<duration>12 hours</duration>
+	</list>
+	<list>
+		<route>Chisinau-Arad</route>
+		<price currency="MDL">1400</price>
+		<departure time="UTC+2">7:00</departure>
+		<duration>15 hours</duration>
+	</list>
+	<list>
+		<route>Chisinau-Sofia</route>
+		<price currency="MDL">1600</price>
+		<departure time="UTC+2">7:40</departure>
+		<duration>16 hours 10 minutes</duration>
+	</list>
+	<list>
+		<route>Chisinau-Narva</route>
+		<price currency="MDL">1350</price>
+		<departure time="UTC+2">7:20</departure>
+		<duration>14 hours 30 minutes</duration>
+	</list>
+	<list>
+		<route>Chisinau-Salonica</route>
+		<price currency="MDL">2000</price>
+		<departure time="UTC+2">7:10</departure>
+		<duration>24 hours</duration>
+	</list>
+	<list>
+		<route>Chisinau-Burgas</route>
+		<price currency="MDL">1650</price>
+		<departure time="UTC+2">8:00</departure>
+		<duration>17 hours</duration>
+	</list>
+</routes>
