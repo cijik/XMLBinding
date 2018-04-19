@@ -1,0 +1,1 @@
+Do 'mvn clean install' before launching the application
