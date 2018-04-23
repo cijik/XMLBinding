@@ -1,7 +1,10 @@
 package com.endava;
 
+import com.sun.xml.internal.bind.v2.runtime.JaxBeanInfo;
 import generated.PurchaseOrder;
 import generated.USAddress;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -13,8 +16,21 @@ import java.math.BigDecimal;
 
 public class Main {
 
-    public static void main(String[] args) throws JAXBException, FileNotFoundException {
+    public static void main(String[] args) {
 
+        Logger logger = LoggerFactory.getLogger("com.endava.Main");
+
+        try {
+            execute();
+        } catch (JAXBException e) {
+            logger.error("Cannot perform a JAXB operation");
+        } catch (FileNotFoundException e) {
+            logger.error("File not found");
+        }
+
+    }
+
+    private static void execute() throws JAXBException, FileNotFoundException {
         JAXBContext context = JAXBContext.newInstance("generated");
 
         Unmarshaller unmarshaller = context.createUnmarshaller();
@@ -31,6 +47,5 @@ public class Main {
         Marshaller marshaller = context.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         marshaller.marshal(po, System.out);
-
     }
 }
