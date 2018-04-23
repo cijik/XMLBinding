@@ -1,6 +1,5 @@
 package com.endava;
 
-import com.sun.xml.internal.bind.v2.runtime.JaxBeanInfo;
 import generated.PurchaseOrder;
 import generated.USAddress;
 import org.slf4j.Logger;
@@ -16,10 +15,12 @@ import java.math.BigDecimal;
 
 public class Main {
 
+    private static Logger logger = LoggerFactory.getLogger(Main.class);
+
     public static void main(String[] args) {
 
-        Logger logger = LoggerFactory.getLogger("com.endava.Main");
 
+        logger.info("Starting application...");
         try {
             execute();
         } catch (JAXBException e) {
@@ -27,6 +28,7 @@ public class Main {
         } catch (FileNotFoundException e) {
             logger.error("File not found");
         }
+        logger.info("Processing finished");
 
     }
 
